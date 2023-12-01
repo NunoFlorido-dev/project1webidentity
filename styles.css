@@ -1,0 +1,195 @@
+/* fonts */
+@font-face{
+  font-family: Oak Sans Medium;
+  src: url(fonts/OakSans-Medium.woff2);
+}
+
+@font-face{
+  font-family: Oak Sans Medium Italic;
+  src: url(fonts/OakSans-MediumItalic.woff2);
+}
+
+@font-face{
+  font-family: Oak Sans Light;
+  src: url(fonts/OakSans-Light.woff2);
+}
+
+@font-face{
+  font-family: Oak Sans Light Italic;
+  src: url(fonts/OakSans-LightItalic.woff2);
+}
+
+
+
+
+
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* canvas container (the entire website) */
+#canvas{
+  width: 100%;
+  height: 100%;
+}
+
+/* canvas styles */
+#canvas .p5Canvas{
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* header */
+
+#canvas header{
+  width: 100%;
+  height: 45rem;
+  grid-row: 1 / span 1;
+}
+
+/* main */
+
+#canvas main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.75fr 0.25fr 0.25fr;
+  grid-gap: 2rem;
+}
+
+/* about section */
+#canvas  main .about{
+  grid-row: 1 / span 1;
+  font-size: 1.25rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(0deg, rgba(29,29,27,1) 75%, rgba(255,255,255,1) 100%);
+
+}
+
+#canvas main .about h2, 
+#canvas main .about p{
+  color: white;
+}
+
+
+
+#canvas  main .speakers{
+  grid-row: 2 / span 1;
+}
+
+#canvas main .speakers h2{
+  padding-left: 20rem;
+  font-size: 2rem;
+}
+
+#canvas main .speakers ul{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 0.5fr 0.5fr;
+}
+
+
+#canvas main .speakers ul li:nth-child(1){
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#canvas main .speakers ul li:nth-child(2){
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#canvas main .speakers ul li:nth-child(3){
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#canvas main .speakers ul li:nth-child(4){
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#canvas main .speakers ul{
+  list-style-type: none;
+}
+
+#canvas  main .local{
+  grid-row: 3 / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvas main .local h2{
+  font-size: 2rem;
+}
+
+#canvas main .local .local-container{
+  width: 30%;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvas main .local .local-container .image-box{
+  width: 24rem;
+  height: 24rem;
+  background-color: black;
+  border-radius: 45px;
+  background-image: url("images/museu_da_ciencia.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#canvas main .local .local-container p{
+  font-size: 1rem;
+}
+
+#canvas  main .organização{
+  grid-row: 4 / span 1;
+  margin-left: 4rem;
+}
+
+#canvas main .organização p,
+#canvas main .contacto p{
+  padding-left: 2rem;
+}
+
+#canvas  main .contacto{
+  grid-row: 5 / span 1;
+  margin-left: 4rem;
+
+}
+
+#canvas main h2{
+  font-family: Oak Sans Medium;
+}
+
+#canvas main p{
+  font-family: Oak Sans Light;
+}
+
+#canvas main ul li{
+  font-family: Oak Sans Light;
+
+}
+
+/* footer */
+#canvas footer{
+  margin-top: 4rem;
+  width: 100%;
+  height: 15rem;
+  background-color: #1d1d1b;
+}
