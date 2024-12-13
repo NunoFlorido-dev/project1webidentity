@@ -22,11 +22,12 @@
 
 
 
-
-body{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+html, body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 
@@ -34,143 +35,84 @@ body{
 #canvas{
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* canvas styles */
-#canvas .p5Canvas{
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  position: absolute;
+#canvas .p5Canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+}
+
+/* nav */
+#canvas nav{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 4;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 900px){
+#canvas nav{
+   flex-direction: column;
+   gap: space-between;
+   justify-content: center;
+   padding: 1rem 1rem;
+  }
+}
+
+#canvas nav a{
+  color: #1d1d1b;
+  font-family: Oak Sans Light;
+  text-decoration: none;
+}
+
+#canvas nav a:hover{
+  text-decoration: underline;
 }
 
 /* header */
 
 #canvas header{
   width: 100%;
-  height: 45rem;
+  height: 55rem;
   grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
+#canvas header img{
+  position: relative;
+  bottom: 4rem;
+  left: .25rem;
+  width: 4rem;
+  height: auto;
+}
 /* main */
+
 
 #canvas main{
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 0.5fr 1fr 0.75fr 0.25fr 0.25fr;
-  grid-gap: 2rem;
-}
-
-/* about section */
-#canvas  main .about{
-  grid-row: 1 / span 1;
-  font-size: 1.25rem;
-  padding-left: 12rem;
-  padding-right: 12rem;
-  padding-top: 9rem;
-  padding-bottom: 2rem;
-  background: linear-gradient(0deg, rgba(29,29,27,1) 75%, rgba(255,255,255,1) 100%);
-
-}
-
-#canvas main .about h2, 
-#canvas main .about p{
-  color: white;
-}
-
-
-
-#canvas  main .speakers{
-  grid-row: 2 / span 1;
-}
-
-#canvas main .speakers h2{
-  padding-left: 20rem;
-  font-size: 2rem;
-}
-
-#canvas main .speakers ul{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.5fr 0.5fr;
-}
-
-
-#canvas main .speakers ul li:nth-child(1){
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-#canvas main .speakers ul li:nth-child(2){
-  grid-column: 3 / span 1;
-  grid-row: 2 / span 1;
-}
-
-#canvas main .speakers ul li:nth-child(3){
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-
-#canvas main .speakers ul li:nth-child(4){
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
-}
-
-#canvas main .speakers ul{
-  list-style-type: none;
-}
-
-#canvas  main .local{
-  grid-row: 3 / span 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#canvas main .local h2{
-  font-size: 2rem;
-}
-
-#canvas main .local .local-container{
-  width: 30%;
-  height: 100%;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#canvas main .local .local-container .image-box{
-  width: 24rem;
-  height: 24rem;
-  background-color: black;
-  border-radius: 45px;
-  background-image: url("images/museu_da_ciencia.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#canvas main .local .local-container p{
-  font-size: 1rem;
-}
-
-#canvas  main .organização{
-  grid-row: 4 / span 1;
-  margin-left: 4rem;
-}
-
-#canvas main .organização p,
-#canvas main .contacto p{
-  padding-left: 2rem;
-}
-
-#canvas  main .contacto{
-  grid-row: 5 / span 1;
-  margin-left: 4rem;
-
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-gap: 8rem;
 }
 
 #canvas main h2{
@@ -186,10 +128,433 @@ body{
 
 }
 
-/* footer */
-#canvas footer{
-  margin-top: 4rem;
-  width: 100%;
-  height: 15rem;
+
+@media (max-width: 904px){
+  #canvas main{
+    grid-gap: 4rem;
+  }
+}
+
+/* about section */
+#canvas  main .about{
+  grid-row: 1 / span 1;
+  max-width: 100%;
+  font-size: 1.25rem;
+  padding: 1.5rem 33% 2rem 2.5rem;
   background-color: #1d1d1b;
+  position: relative;
+  z-index: 2;
+}
+
+#canvas main .about-container{
+  position: relative;
+  z-index: 3;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 635px){
+  
+  #canvas  main .about .about-container{
+    font-size: 1rem;
+  }
+
+}
+
+#canvas main .about .about-container h2, 
+#canvas main .about .about-container p{
+  color: white;
+  position: relative; 
+  z-index: 3;
+}
+
+#canvas main .about .about-container h2{
+  font-size: 3rem;
+  z-index: 3;
+
+}
+
+#canvas main .about-container p{
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  margin-top: -1rem;
+  margin-bottom: 3.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+  z-index: 3;
+
+}
+
+
+/* speakers section */
+#canvas  main .speakers{
+  margin-top: -4rem;
+  margin-bottom: 2rem;
+  grid-row: 2 / span 1;
+  z-index: 3;
+  padding-left: 2rem;
+  padding-right: 7rem;
+  position: relative;
+}
+
+#canvas main .speakers h2{
+  margin-left: .5rem;
+}
+
+#canvas main .speakers ul{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  list-style-type: none;
+
+}
+
+#canvas main .speakers ul .top{
+ display: flex;
+ gap: 8rem;
+ grid-row: 1 / span 1;
+ justify-self: start;
+ flex-wrap: wrap;
+}
+
+#canvas main .speakers ul .bottom{
+   display: flex;
+   flex-wrap: wrap;
+   grid-row: 2 / span 1;
+   gap: 8rem;
+   justify-self: end;
+}
+
+#canvas main .speakers ul li{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#canvas main .speakers ul li p:nth-child(1){
+  align-self: flex-start;
+}
+
+#canvas main .speakers ul li .dia{
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+  font-size: 1.35rem;
+}
+
+#canvas main .speakers ul li .person{
+  margin-top: .5rem;
+  margin-right: 1rem;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 1.6rem;
+}
+
+#canvas main .speakers ul li .job{
+  margin-top: -1.4rem;
+  margin-right: 1rem;
+  align-self: flex-end;
+  text-align: right;
+  font-size: 1.115rem;
+}
+
+#canvas main .speakers ul li button{
+  width: 18rem;
+  height: 18rem;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  border: 2px solid #1d1d1b;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+#canvas main .speakers ul li button:hover{
+  cursor: pointer;
+}
+
+
+#canvas main .speakers ul li button img{
+  width: 75%;
+  height: auto;
+}
+
+#canvas main .speakers ul .top li:nth-child(2) button img{
+  position: relative;
+  bottom: 1rem;
+  height: 80%;
+}
+
+#canvas main .speakers ul .bottom li:nth-child(2) button img{
+  position: relative;
+  bottom: 1rem;
+  height: 85%;
+}
+
+
+#canvas main .speakers h2{
+  font-size: 3rem;
+}
+
+#canvas main .description{
+  background-color: white;
+  border: 2px solid #1d1d1b;
+  margin: auto;
+  width: 26rem;
+  border-radius: 20px;
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+
+
+#canvas main .description img{
+  width: 1.5rem;
+  height: auto;
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+}
+
+#canvas main .description img:hover{
+  cursor: pointer;
+}
+
+#canvas main .showModal{
+  display: block;
+
+}
+
+#canvas main .description .text-container{
+  margin: 4rem;
+}
+
+#canvas main .description .text-container h2{
+  font-size: 3rem;
+  margin-left: 0px;
+  margin-bottom: .5rem;
+  line-height: 3rem;
+}
+
+#canvas main .description .text-container a{
+  color: #1d1d1b;
+  text-decoration: none;
+  font-family: "Oak Sans Light";
+}
+
+#canvas main .description .text-container a:hover{
+  text-decoration: underline;
+}
+
+#canvas main .description .text-container p{
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.25rem;
+}
+
+#canvas main .creditos {
+  position: relative;
+  background-color: #1d1d1b;
+  color: white;
+  width: 100%;
+  height: 100%;
+  grid-row: 3 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  z-index: 2;
+}
+
+#canvas main .creditos .local {
+
+}
+
+#canvas main .creditos .organizacao {
+ 
+}
+
+#canvas main .creditos div {
+  width: 30%;
+  padding: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+#canvas main .creditos .organizacao,
+#canvas main .creditos .contacto,
+#canvas main .creditos .local {
+  position: relative; 
+  z-index: 3;
+}
+
+#canvas main .creditos .organizacao h2,
+#canvas main .creditos .contacto h2, 
+#canvas main .creditos .local h2 {
+  position: relative;
+  font-size: 2rem;
+  z-index: 3;
+}
+
+@media (min-width: 900px){
+  #canvas main .creditos .local h2{
+    text-align: left;
+  }
+
+  #canvas main .creditos .local p{
+    text-align: right;
+  }
+
+  #canvas main .creditos .local .image-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+}
+
+#canvas main .creditos .local p{
+  font-family: Oak Sans Light;
+  color: white;
+  text-decoration: none;
+}
+
+
+#canvas main .creditos .local .image-container{
+  width: 8rem;
+  height: 8rem; 
+  margin-top: -1rem;
+  border-radius: 10px;
+  background-image: url('images/museu_da_ciencia_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+#canvas main .creditos .organizacao p,
+#canvas main .creditos .contacto p, 
+#canvas main .creditos .local p {
+  position: relative;
+  font-size: 1.25rem;
+  z-index: 3;
+}
+
+
+@media (max-width: 900px){
+  #canvas  main .speakers{
+    margin-bottom: 4rem;
+  }
+
+
+  #canvas main .creditos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  #canvas main .creditos .local .image-container{
+    width: 8rem;
+    height: 8rem; 
+    margin-top: -1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: block;
+  }
+
+
+  #canvas main{
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+  }
+
+  #canvas  main .about{
+    grid-row: 1 / span 1;
+    font-size: 1.25rem;
+    padding: 1.5rem 3rem;
+    background-color: #1d1d1b;
+    position: relative;
+  }
+
+
+}
+
+@media (max-width: 850px){
+  #canvas main .speakers ul .top,
+  #canvas main .speakers ul .bottom{
+    display: flex;
+    justify-content: center;
+  }
+
+  #canvas main .speakers ul .top{
+   display: flex;
+   gap: 4rem;
+   grid-row: 1 / span 1;
+   justify-self: center;
+   flex-wrap: wrap;
+  }
+
+  #canvas main .speakers ul .bottom{
+     display: flex;
+     flex-wrap: wrap;
+     grid-row: 2 / span 1;
+     gap: 4rem;
+     justify-self: center;
+  }
+
+  
+}
+
+@media (max-width: 635px){
+
+  #canvas main .creditos div {
+    width: 60%;
+    padding: 2rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+
+}
+
+
+@media (max-width: 450px){
+  
+  #canvas  main .about{
+    font-size: 1rem;
+  }
+
+  #canvas main .about .about-container h2{
+    font-size: 2.25rem;
+  }
+  
+  #canvas main .about-container{
+    position: relative;
+    z-index: 3;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+
+ 
+  #canvas main .creditos .organizacao h2,
+  #canvas main .creditos .contacto h2, 
+  #canvas main .creditos .local h2 {
+    position: relative;
+    font-size: 2rem;
+    z-index: 3;
+  }
+
+  #canvas main .creditos .organizacao p,
+  #canvas main .creditos .contacto p, 
+  #canvas main .creditos .local a {
+    position: relative;
+    font-size: 1.25rem;
+    z-index: 3;
+  }
+
 }

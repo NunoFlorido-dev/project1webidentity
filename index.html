@@ -1,100 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" >
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    >
 
-  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <link rel="stylesheet" href="styles.css"/>
-  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="web_interaction.js"></script>
-  <script language="javascript" type="text/javascript" src="type_object.js"></script>
-  <script language="javascript" type="text/javascript" src="conversas.js"></script>
-  <script language="javascript" type="text/javascript" src="script.js"></script>
+    <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+    <link rel="stylesheet" href="styles.css" >
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="libraries/p5.min.js"
+    ></script>
+    <script
+      async
+      defer
+      language="javascript"
+      type="text/javascript"
+      src="conversas.js"
+    ></script>
+    <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
-  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+  <title>CCDM</title>
+  </head>
 
-</head>
+  <body>
+    <div id="canvas">
 
-  
-<body>
+      <nav>
+        <a href="#header">Home</a>
+        <a href="#about">Sobre (CC–D+M)</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#creditos">Contactos</a>
+      </nav>
 
- <div id="canvas">
-  <header></header>
-  <main>
-   
-    <section class="about">
-     <h2>Sobre (CC–D+M)</h2>
-     <p>
-       “Ciclo de Conversas Design+Multimédia” é um ciclo de conferências que se realiza anualmente no âmbito dos cursos de Licenciatura e Mestrado em Design e Multimédia da Faculdade de Ciências e de Tecnologia da Universidade de Coimbra. <br />
+      <header id="header">
+        <img src="images/down-arrow-svgrepo-com.svg" />
+      </header>
 
-       Que decorrerá em Abril de 2022, repartida em quatro sessões que terão lugar às quartas da parte da tarde, no auditório do Museu da Ciência em Coimbra. As conferências são abertas ao público em geral e de entrada livre.<br />
+      <main>
+        <section id="about" class="about">
+          <div class="about-container">
+            <h2 class="hidden-text">Sobre (CC–D+M)</h2>
+            <p class="hidden-text">
+              “Ciclo de Conversas Design+Multimédia” é um ciclo de conferências
+              que se realiza anualmente no âmbito dos cursos de Licenciatura e
+              Mestrado em Design e Multimédia da Faculdade de Ciências e de
+              Tecnologia da Universidade de Coimbra, que decorrerá em Abril de
+              2022, repartida em quatro sessões que terão lugar às quartas da
+              parte da tarde, no auditório do Museu da Ciência em Coimbra. As
+              conferências são abertas ao público em geral e de entrada livre.
+            </p>
 
-       Esta acção de divulgação pública fora da Faculdade pretende não só mostrar o trabalho de diferentes profissionais cujo trabalho é amplamente reconhecido, como contribuir para a divulgação do cursos, os primeiros nesta área leccionados na Universidade de Coimbra. O programa é constituído por convidados de diversas áreas (Design Gráfico, Design de Interacção, Web Design, Arquitectura, Teoria do Design, Arte, Ilustração, etc.) repartidos por quatro sessões. Propositadamente se junta, na mesma sessão, duas entidades convidadas (que podem ser individuais ou colectivas) de áreas distintas.<br />
-     </p>
-    </section>
+            <p class="hidden-text">
+              Esta acção de divulgação pública fora da Faculdade pretende não só
+              mostrar o trabalho de diferentes profissionais cujo trabalho é
+              amplamente reconhecido, como contribuir para a divulgação do
+              cursos, os primeiros nesta área leccionados na Universidade de
+              Coimbra. O programa é constituído por convidados de diversas áreas
+              (Design Gráfico, Design de Interacção, Web Design, Arquitectura,
+              Teoria do Design, Arte, Ilustração, etc.) repartidos por quatro
+              sessões. Propositadamente se junta, na mesma sessão, duas
+              entidades convidadas (que podem ser individuais ou colectivas) de
+              áreas distintas.
+            </p>
+          </div>
+        </section>
 
-    <section class="speakers">
-      <h2>Speakers</h2>
-      <ul>
-        <li>
-          <img src="" alt="Speaker 1" />
-          Braulio Amado (Design Gráfico e Ilustração) <br />
-          <a href="https://badbadbadbad.com/">https://badbadbadbad.com/</a><br />
-          7 Abril <br />
-        </li>
+        <section id="speakers" class="speakers">
+          <h2>Speakers</h2>
+          <ul>
+            <div class="top">
+              <li>
+                <p class="dia">7 Abril</p>
+                <button>
+                  <img src="images/braulio.svg" alt="Braúlio Amado Illustration" />
+                </button>
+                <p class="person">Bráulio Amado</p>
+                <p class="job">Graphic Design and Illustration</p>
+              </li>
 
-        <li>
-          <img src="" alt="Speaker 2" />
-          Camila Nogueira (Digital Art)<br />
-         <a href="https://badbadbadbad.com/">https://badbadbadbad.com/</a><br />
-          14 abril <br />
-        </li>
+              <li>
+                <p class="dia">14 abril</p>
+                <button>
+                  <img src="images/camila.svg" alt="Camila Nogueira Illustration" />
+                </button>
+                <p class="person">Camila Nogueira</p>
+                <p class="job">Digital Art</p>
+              </li>
+            </div>
 
-        <li>
-          <img src="" alt="Speaker 3" />
-          Susana Carvalho (Type Designer)<br />
-          <a href="https://www.susanacarvalho.com">https://www.susanacarvalho.com</a><br />
-          <a href="https://carvalho-bernau.com/
-">https://carvalho-bernau.com/
-</a><br />
-          21 abril <br />  
-        </li>
+            <div class="bottom">
+              <li>
+                <p class="dia">21 abril</p>
+                <button>
+                  <img src="images/susana.svg" alt="Susana Carvalho" />
+                </button>
+                <p class="person">Susana Carvalho</p>
+                <p class="job">Type Designer</p>
+              </li>
 
-        <li>
-          <img src="" alt="Speaker 4" />
-          Rejaine dal Bello (Design Gráfico)<br />
-          <a href="https://rejanedalbello.com/">https://rejanedalbello.com/</a><br />
-          28 abril<br />
-        </li>
-      </ul>
-    </section>
+              <li>
+                <p class="dia">28 abril</p>
+                <button>
+                  <img src="images/rejane.svg" alt="Rejane Dal Bello" />
+                </button>
+                <p class="person">Rejane dal Bello <br /></p>
+                <p class="job">Graphic Design</p>
+              </li>
+            </div>
+          </ul>
 
-    <section class="local">
-      <h2>Local</h2>
-      <div class="local-container">
-      <a href="https://maps.app.goo.gl/1tmCasNcQmnwgtAf6"><div class="image-box"></div></a>
-      <p>Museu da Ciência da Universidade de Coimbra </p>
-    </div>
-    </section>  
+          <section class="description" id="braulio-desc">
+        <img src="images/close-button.svg" alt="close button icon" />
+          <div class="text-container">
+             <h2>Braúlio Amado</h2>
+             <a href="https://badbadbadbad.com/">https://badbadbadbad.com/</a>
+             <p>Bráulio Amado is a Portuguese graphic designer born in 1987, living in Brooklyn, New York, USA. He is currently an Art Director, Designer and Illustrator at Bloomberg Businessweek magazine. In the past he has worked at Pentagram NY, Red Antler, and has been commissioned by The New York Times Magazine, Penguin, Twitter, among others.
+          </p>
+          </div>
+
+          </section>
 
 
-    <section class="organização">
-      <h2>Organização</h2>
-      <p>Pedro Martins</p>
-      <p>Nuno Coelho</p>
-    </section>
+                      <section class="description" id="camila-desc">
+                        <img src="images/close-button.svg" alt="close button icon"/>
+                  <div class="text-container">
+                     <h2>Camila Nogueira</h2>
+                     <a href="https://camilaillustration.pt/">https://camilaillustration.pt/</a>
+                     <p>Camila Nogueira is a Portuguese artist currently residing in the picturesque city of Porto, Portugal. Graduating in 2015, she has since pursued a career as a freelancer, engaging in various commercial illustration projects while also dedicating time to her personal artistic endeavors.
+          </p>
 
-   <section class="contacto">
-     <h2>Contacto</h2>
-     <p>239 700 600</p>
-     <p>cicloconversas@fct.uc.pt</p>
-   </section>
+                  </div>
+
+                  </section>
+
+                     <section class="description" id="susana-desc">
+                       <img src="images/close-button.svg" alt="close button icon"/>
+                  <div class="text-container">
+                     <h2>Susana Carvalho</h2>
+                     <a href="https://www.susanacarvalho.com">https://www.susanacarvalho.com</a>
+                     <a href="https://carvalho-bernau.com/">https://carvalho-bernau.com/</a>
+                     <p>Susana Carvalho studied communication design at the Faculty of Fine Arts at the University of Lisbon (FBAUL). In 2004 she moved to the Netherlands to complete the TypeMedia MA programme at the Royal Academy of Art in The Hague (KABK). Recently her interest in education led her to pursue a MEd in Education in Arts at the Piet Zwart Institute in Rotterdam where she researched the potential of space as a pedagogical tool in the graphic design classroom. She founded Atelier Carvalho Bernau in 2005 with her partner Kai Bernau.
+
+                  </div>
+
+          </p>
+
+                  </section>
+
+                    <section class="description" id="rejane-desc">
+                      <img src="images/close-button.svg" alt="close button icon"/>
+                  <div class="text-container">
+                     <h2>Rejane dal Bello</h2>
+                     <a href="https://rejanedalbello.com/">https://rejanedalbello.com/</a>
+                     <p>Rejane Dal Bello AGI Member an award-winning designer since 2022 with a history of iconic work. She has 20 years of experience in graphic design and branding, including stints at renowned agencies such as Wolff Olins (UK) and Studio Dumbar (NL), and recently she wrote the ‘Citizen First, Designer Second‘ book published by Counter-print.
+          </p> 
+
+                  </div>
+            
+                  </section>
+        </section>
+
+        <section id="creditos" class="creditos">
+          <div class="organizacao">
+            <h2>Organização</h2>
+            <p>Pedro Martins</p>
+            <p>Nuno Coelho</p>
+          </div>
+
+          <div class="contacto">
+            <h2>Contacto</h2>
+            <p>239 700 600</p>
+            <p>cicloconversas@fct.uc.pt</p>
+          </div>
+
+          <div class="local">
+            <h2>Local</h2>        <a href="https://www.google.com/maps/place/Museu+da+Ci%C3%AAncia+da+Universidade+de+Coimbra/@40.2102058,-8.4263005,17z/data=!3m2!4b1!5s0xd22f90be3e10c7f:0xb2dd80751cd3e88f!4m6!3m5!1s0xd22f90bdfee5f61:0x5005b59f77dbff8b!8m2!3d40.2102017!4d-8.4237256!16s%2Fm%2F03gwnb6?entry=ttu">
+            <div class="image-container"></div></a>
+    <p>Museu da Ciência da Universidade de Coimbra</p>
+          </div>
+        </section>
+        
+      </main>
     
-  </main>
-  <footer></footer>
- </div>
-  
+    
+    </div>
 
-</body>
+    <script src="app.js"></script>
+
+  </body>
 </html>
