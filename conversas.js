@@ -123,7 +123,7 @@ function windowResized() {
   containerHeight = container.offsetHeight;
   resizeCanvas(containerWidth, containerHeight);
 
-  startPosX = (containerWidth / 2) - (totalWidth / 2);
+  startPosX = containerWidth / 2 - totalWidth / 2;
 }
 
 // Defining the grid
@@ -152,84 +152,84 @@ function defineGridVars() {
 function initializeTypes() {
   // Initialization of each type objects
   c_type = new Type(
-    ["../data/C.svg", "../data/C_elemento.svg"],
+    ["data/C.svg", "data/C_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "C",
     [18],
-    [48.25],
+    [48.25]
   );
 
   o_type = new Type(
-    ["../data/O.svg"],
+    ["data/O.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "O",
     [151.33],
-    [48.5],
+    [48.5]
   );
 
   n_type = new Type(
-    ["../data/N.svg", "../data/N_elemento.svg", "../data/N2_elemento.svg"],
+    ["data/N.svg", "data/N_elemento.svg", "data/N2_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "N",
     [287, 220],
-    [15.0696, 85],
+    [15.0696, 85]
   );
 
   v_type = new Type(
-    ["../data/V.svg", "../data/V_elemento.svg", "../data/V2_elemento.svg"],
+    ["data/V.svg", "data/V_elemento.svg", "data/V2_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "V",
     [68.3325, 26],
-    [149.5, 149.5],
+    [149.5, 149.5]
   );
 
   e_type = new Type(
-    ["../data/E.svg", "../data/E_elemento.svg"],
+    ["data/E.svg", "data/E_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "E",
     [118],
-    [151.5],
+    [151.5]
   );
 
   r_type = new Type(
-    ["../data/R.svg", "../data/R_elemento.svg"],
+    ["data/R.svg", "data/R_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "R",
     [220],
-    [185],
+    [185]
   );
 
   s1_type = new Type(
-    ["../data/S_1.svg", "../data/S_elemento.svg"],
+    ["data/S_1.svg", "data/S_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "S1",
     [48.25],
-    [256],
+    [256]
   );
 
   a_type = new Type(
-    ["../data/A.svg", "../data/A_elemento.svg"],
+    ["data/A.svg", "data/A_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "A",
     [151.33],
-    [260],
+    [260]
   );
 
   s2_type = new Type(
-    ["../data/S_2.svg", "../data/S_elemento.svg"],
+    ["data/S_2.svg", "data/S_elemento.svg"],
     adjustedCellWidth,
     adjustedCellHeight,
     "S2",
     [254.5],
-    [256],
+    [256]
   );
 
   // Loading types into the typeArray (0 - 8) (9)
@@ -379,24 +379,24 @@ function changeColor() {
 function colorGradient() {
   const about = document.querySelector("#canvas main .about");
   const aboutH2 = document.querySelector(
-    "#canvas main .about .about-container h2",
+    "#canvas main .about .about-container h2"
   );
   const aboutP = Array.from(
-    document.querySelectorAll("#canvas main .about .about-container p"),
+    document.querySelectorAll("#canvas main .about .about-container p")
   );
 
   const speakers = Array.from(
-    document.querySelectorAll("#canvas main .speakers ul li button"),
+    document.querySelectorAll("#canvas main .speakers ul li button")
   );
 
   const creditos = document.querySelector("#canvas main .creditos");
   const creditosH2 = Array.from(
-    document.querySelectorAll("#canvas main .creditos div h2"),
+    document.querySelectorAll("#canvas main .creditos div h2")
   );
   const creditosP = Array.from(
-    document.querySelectorAll("#canvas main .creditos div p"),
+    document.querySelectorAll("#canvas main .creditos div p")
   );
-  const creditosLink = document.querySelector('#canvas main .creditos a');
+  const creditosLink = document.querySelector("#canvas main .creditos a");
 
   if (lastColor === undefined) {
     mainColor = elementColor;
@@ -438,8 +438,7 @@ function colorGradient() {
         for (let i = 0; i < creditosH2.length; i++) {
           creditosH2[i].style.color = "#1d1d1b";
         }
-         creditosLink.style.color = "#1d1d1b";
-        
+        creditosLink.style.color = "#1d1d1b";
       } else {
         // For red, green, or blue background color
         for (let i = 0; i < creditosP.length; i++) {
@@ -448,9 +447,7 @@ function colorGradient() {
         for (let i = 0; i < creditosH2.length; i++) {
           creditosH2[i].style.color = "white";
         }
-         creditosLink.style.color = "white";
-
-        
+        creditosLink.style.color = "white";
       }
     });
 
@@ -614,7 +611,7 @@ function draw() {
       mainColor.levels[0],
       mainColor.levels[1],
       mainColor.levels[2],
-      alphaValue,
+      alphaValue
     );
     circle(trail[i].x, trail[i].y, 28);
   }
