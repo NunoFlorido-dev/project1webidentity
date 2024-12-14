@@ -402,7 +402,7 @@ html, body
   }
 
   #canvas main .creditos .local p{
-    text-align: right;
+    text-align: left;
   }
 
   #canvas main .creditos .local .image-container{
@@ -419,26 +419,21 @@ html, body
   text-decoration: none;
 }
 
-
-#canvas main .creditos .local .image-container{
-  width: 8rem;
-  height: 8rem; 
-  margin-top: -1rem;
-  border-radius: 10px;
-  background-image: url('images/museu_da_ciencia_2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  margin-bottom: 1rem;
+#canvas main .creditos .local a{
+text-decoration: underline;
+text-decoration-color: white;
 }
+
+
 
 
 #canvas main .creditos .organizacao p,
 #canvas main .creditos .contacto p, 
-#canvas main .creditos .local p {
+#canvas main .creditos .local a p {
   position: relative;
   font-size: 1.25rem;
   z-index: 3;
+  color: white;
 }
 
 
